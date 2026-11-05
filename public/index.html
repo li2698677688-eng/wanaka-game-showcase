@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="From video to playable worlds. Explore original videos alongside games made with Wanaka.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Games — Wanaka</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="./assets/fonts/OpenAISans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="./theme.js"></script>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" type="module"></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#games">Skip to games</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Wanaka Games Showcase home">Wanaka<span>Games Showcase</span></a>
+    <div class="header-actions">
+      <a class="pill header-cta" href="https://studio.wanaka.app/">Create a game<svg aria-hidden="true"><use href="#arrow-up-right"/></svg></a>
+      <details class="theme-picker">
+        <summary aria-label="Choose theme" title="Choose theme">
+          <svg class="sun" aria-hidden="true"><use href="#sun"/></svg>
+          <svg class="moon" aria-hidden="true"><use href="#moon"/></svg>
+        </summary>
+        <fieldset>
+          <legend class="sr-only">Theme</legend>
+          <label><span>Light</span><input type="radio" name="theme" value="light"></label>
+          <label><span>Dark</span><input type="radio" name="theme" value="dark"></label>
+          <label><span>System</span><input type="radio" name="theme" value="system" checked></label>
+        </fieldset>
+      </details>
+    </div>
+  </header>
+  <main class="page" id="games">
+    <section class="intro" aria-labelledby="page-title">
+      <h1 id="page-title">Games</h1>
+      <p>From video to playable worlds.<br>See what comes to life with Wanaka.</p>
+    </section>
+    <div id="game-list" aria-live="polite"><p class="load-state">Loading games…</p></div>
+    <noscript><p>Please enable JavaScript to view the video comparisons.</p></noscript>
+    <footer class="site-footer"><a href="#top">Wanaka</a><p>From video to play.</p><a href="#top">Back to top<svg aria-hidden="true"><use href="#arrow-up"/></svg></a></footer>
+  </main>
+  <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+    <symbol id="arrow-up" viewBox="0 0 24 24"><path d="m6 11 6-6 6 6M12 5v14"/></symbol>
+    <symbol id="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></symbol>
+    <symbol id="moon" viewBox="0 0 24 24"><path d="M20.7 13.1A9 9 0 0 1 10.9 3.3a9 9 0 1 0 9.8 9.8Z"/></symbol>
+  </svg>
+</body>
+</html>
