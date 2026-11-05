@@ -1,7 +1,6 @@
 const list = document.querySelector('#game-list');
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-const videosStarted = new WeakSet();
-const automaticPlayback = new WeakMap();
+const visibleVideos = new Set();
 const arrow = () => {
   const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   svg.setAttribute('aria-hidden', 'true');
@@ -50,7 +49,10 @@ function createVideo(game, type) {
     errorState.hidden = true;
   });
   video.addEventListener('play', () => {
-    if (!automaticPlayback.get(video)) videosStarted.add(video);
+    if (!visibleVideos.has(video) || document.hidden) {
+      video.pause();
+      return;
+    }
     if (!video.muted) document.querySelectorAll('video').forEach(other => { if (other !== video) other.muted = true; });
   });
   video.addEventListener('volumechange', () => {
@@ -112,21 +114,29 @@ async function loadGames() {
     }
     list.replaceChildren(fragment);
     const observer = new IntersectionObserver(entries => {
-      for (const { target: video, isIntersecting } of entries) {
-        if (isIntersecting) {
+      for (const { target: video, isIntersecting, intersectionRatio } of entries) {
+        if (isIntersecting && intersectionRatio >= 0.25) {
+          visibleVideos.add(video);
           if (!video.src) video.src = video.dataset.src;
-          if (!reducedMotion.matches && !videosStarted.has(video)) {
-            automaticPlayback.set(video, true);
-            video.play().catch(() => {}).finally(() => automaticPlayback.set(video, false));
-          }
+          if (!document.hidden && !reducedMotion.matches) video.play().catch(() => {});
         } else {
+          visibleVideos.delete(video);
           video.pause();
         }
       }
-    }, { threshold: 0.25 });
+    }, { threshold: [0, 0.25] });
     document.querySelectorAll('video').forEach(video => observer.observe(video));
+    const playingBeforeHidden = new Set();
     document.addEventListener('visibilitychange', () => {
-      if (document.hidden) document.querySelectorAll('video').forEach(video => video.pause());
+      if (document.hidden) {
+        playingBeforeHidden.clear();
+        visibleVideos.forEach(video => { if (!video.paused) playingBeforeHidden.add(video); video.pause(); });
+      } else {
+        playingBeforeHidden.forEach(video => {
+          if (visibleVideos.has(video) && !reducedMotion.matches) video.play().catch(() => {});
+        });
+        playingBeforeHidden.clear();
+      }
     });
     if (location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView();
   } catch {
