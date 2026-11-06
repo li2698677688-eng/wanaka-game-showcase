@@ -16,5 +16,11 @@
     "name": "Forest Adventure",
     "originalName": "森林冒险",
     "url": null
+  },
+  {
+    "id": "snow-walk",
+    "name": "Snow Walk",
+    "originalName": "雪天走路",
+    "url": null
   }
 ]
