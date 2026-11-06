@@ -30,7 +30,7 @@ function createVideo(game, type) {
   video.playsInline = true;
   video.preload = 'none';
   video.poster = `./assets/posters/${game.id}-${type}.jpg`;
-  video.dataset.src = `./assets/videos/${game.id}-${type}.mp4`;
+  video.dataset.src = `./assets/videos/${game.id}-${type}.mp4?v=20261106`;
   video.setAttribute('aria-label', `${game.name} — ${isOriginal ? 'original video' : 'Wanaka game recording'}`);
   const errorState = document.createElement('div');
   errorState.className = 'video-error';
