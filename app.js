@@ -96,7 +96,7 @@ function createVideo(game, type) {
 
 async function loadGames() {
   try {
-    const response = await fetch('./games.json');
+    const response = await fetch('./games.json?v=20261106-links');
     if (!response.ok) throw new Error('Could not load game list');
     const games = await response.json();
     if (!Array.isArray(games) || !games.length || games.some(game => !/^[a-z0-9-]+$/.test(game.id) || typeof game.name !== 'string')) throw new Error('Invalid game list');
