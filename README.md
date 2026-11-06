@@ -10,11 +10,11 @@
 
 统一编辑 `public/games.json`，把每个游戏的 `url: null` 改成真实完整地址，例如 `"url": "https://example.com/game"`。刷新后按钮自动启用，在新标签页打开。没有地址时显示 “Game link coming soon”，按钮不可点击。
 
-标题翻译对应关系：Tiny Planet = 小小星球；Planet Mower = 星球割草机；Forest Adventure = 森林冒险。
+标题翻译对应关系：Tiny Planet = 小小星球；Planet Mower = 星球割草机；Forest Adventure = 森林冒险；Snow Walk = 雪天走路。
 
 ## 构建与检查
 
-- `npm run verify`：核对三组素材及本地视频播放所需的文件分段读取。
+- `npm run verify`：核对四组素材及本地视频播放所需的文件分段读取。
 - `npm run build`：生成 `dist/`，可上传到支持静态文件的网站服务。部署时保留完整文件结构。
 - GitHub Pages 从 `gh-pages` 分支发布；提交 `public/` 的更改后，运行 `git subtree push --prefix public origin gh-pages` 更新网站。
 

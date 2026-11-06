@@ -3,7 +3,7 @@ import { readFile, stat } from 'node:fs/promises';
 import { once } from 'node:events';
 const root = new URL('../public/', import.meta.url);
 const games = JSON.parse(await readFile(new URL('games.json', root), 'utf8'));
-assert.equal(games.length, 3, 'Expected all three supplied game pairs');
+assert.equal(games.length, 4, 'Expected all four supplied game pairs');
 assert.equal(new Set(games.map(g => g.id)).size, games.length);
 for (const game of games) {
   assert.match(game.id, /^[a-z0-9-]+$/);
@@ -32,5 +32,5 @@ try {
   assert.equal((await fetch(`${base}/missing.mp4`)).status, 404);
   assert.equal((await fetch(`${base}/games.json`, { method: 'POST' })).status, 405);
   assert.equal((await fetch(`${base}/%2e%2e%2fpackage.json`)).status, 403);
-  console.log('PASS: three complete video pairs, game links, media seeking, missing files, and path protection.');
+  console.log('PASS: four complete video pairs, game links, media seeking, missing files, and path protection.');
 } finally { server.close(); server.closeAllConnections(); }
