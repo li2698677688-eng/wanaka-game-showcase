@@ -3,12 +3,13 @@ import { readFile, stat } from 'node:fs/promises';
 import { once } from 'node:events';
 const root = new URL('../public/', import.meta.url);
 const games = JSON.parse(await readFile(new URL('games.json', root), 'utf8'));
-assert.equal(games.length, 4, 'Expected all four supplied game pairs');
+assert.ok(games.length >= 51, 'Expected all selected games');
 assert.equal(new Set(games.map(g => g.id)).size, games.length);
 for (const game of games) {
   assert.match(game.id, /^[a-z0-9-]+$/);
   if (game.url !== null) assert.ok(['http:', 'https:'].includes(new URL(game.url).protocol), 'Game link must be an HTTP(S) URL');
   for (const type of ['original', 'wanaka']) {
+    if (type === 'wanaka' && game.recording === false) continue;
     assert.ok((await stat(new URL(`assets/videos/${game.id}-${type}.mp4`, root))).size > 0);
     assert.ok((await stat(new URL(`assets/posters/${game.id}-${type}.jpg`, root))).size > 0);
   }
@@ -32,5 +33,5 @@ try {
   assert.equal((await fetch(`${base}/missing.mp4`)).status, 404);
   assert.equal((await fetch(`${base}/games.json`, { method: 'POST' })).status, 405);
   assert.equal((await fetch(`${base}/%2e%2e%2fpackage.json`)).status, 403);
-  console.log('PASS: four complete video pairs, game links, media seeking, missing files, and path protection.');
+  console.log(`PASS: ${games.length} games, available videos, game links, media seeking, missing files, and path protection.`);
 } finally { server.close(); server.closeAllConnections(); }
