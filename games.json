@@ -24,9 +24,331 @@
     "url": "https://staging.wanaka.games/g/gam_0bc79LzkIA0U1Uv"
   },
   {
+    "id": "game-01",
+    "name": "Sunny Hamlet",
+    "originalName": "【可试玩】01 阳光小村 · Sunny Hamlet",
+    "url": "https://staging.wanaka.games/g/gam_0be2p2VVyxlrXl0",
+    "recording": false
+  },
+  {
+    "id": "game-02",
+    "name": "Cozy Caravan",
+    "originalName": "【可试玩】02 悠游篷车 · Cozy Caravan",
+    "url": "https://staging.wanaka.games/g/gam_0bcfbm7um0OScue",
+    "recording": false
+  },
+  {
+    "id": "game-03",
+    "name": "Loop Build",
+    "originalName": "【可试玩】03 微缩村庄 · Loop Build",
+    "url": "https://staging.wanaka.games/g/gam_0bcVSiP66V7l8Ev",
+    "recording": false
+  },
+  {
+    "id": "game-04",
+    "name": "Whisper of the House",
+    "originalName": "【可试玩】04 Whisper of the House — 屋子的低语",
+    "url": "https://staging.wanaka.games/g/gam_0begDQntkMU7d0b",
+    "recording": false
+  },
+  {
+    "id": "game-05",
+    "name": "Little Glade",
+    "originalName": "【可试玩】05 Little Glade",
+    "url": "https://staging.wanaka.games/g/gam_0bdLBWDml19v387",
+    "recording": false
+  },
+  {
+    "id": "game-08",
+    "name": "Snow Rider",
+    "originalName": "【可试玩】08 Snow Rider 雪地滑行",
+    "url": "https://staging.wanaka.games/g/gam_0bdMC5qgYBYLJhY",
+    "recording": false
+  },
+  {
+    "id": "game-10",
+    "name": "Blob Bow",
+    "originalName": "【可试玩】10 Blob Bow",
+    "url": "https://staging.wanaka.games/g/gam_0bdPvsAmR3ZLPqE",
+    "recording": false
+  },
+  {
+    "id": "game-11",
+    "name": "Fox Isle",
+    "originalName": "【可试玩】11 狐狸的小岛 Fox Isle",
+    "url": "https://staging.wanaka.games/g/gam_0bdZ6W8tnpQnn9c",
+    "recording": false
+  },
+  {
+    "id": "game-12",
+    "name": "Bunny Burrow",
+    "originalName": "【可试玩】12 Bunny Burrow",
+    "url": "https://staging.wanaka.games/g/gam_0bda80UgCoi8Y5V",
+    "recording": false
+  },
+  {
+    "id": "game-13",
+    "name": "Rope Raid",
+    "originalName": "【可试玩】13 Rope Raid",
+    "url": "https://staging.wanaka.games/g/gam_0bdcnEIPjnCKGA1",
+    "recording": false
+  },
+  {
+    "id": "game-14",
+    "name": "Ruins of Light",
+    "originalName": "【可试玩】14 遗迹之光 · Enu: Ruins of Light",
+    "url": "https://staging.wanaka.games/g/gam_0bdf0I3CO0DKfhK",
+    "recording": false
+  },
+  {
+    "id": "game-15",
+    "name": "Block Tower",
+    "originalName": "【可试玩】15 方块塔 Block Tower",
+    "url": "https://staging.wanaka.games/g/gam_0bdo4dHZ9pEHpmB",
+    "recording": false
+  },
+  {
+    "id": "game-16",
+    "name": "Snake Quest",
+    "originalName": "【可试玩】16 小蛇寻宝 · Snake Quest",
+    "url": "https://staging.wanaka.games/g/gam_0bebEVVHRMMFx6y",
+    "recording": false
+  },
+  {
+    "id": "game-17",
+    "name": "Dungeon Expedition",
+    "originalName": "【可试玩】17 深渊回响 · 地牢远征",
+    "url": "https://staging.wanaka.games/g/gam_0bduBjlY1f7VqrM",
+    "recording": false
+  },
+  {
+    "id": "game-18",
+    "name": "The Light Below",
+    "originalName": "【可试玩】【待保存】18 地下的光",
+    "url": "https://staging.wanaka.games/g/gam_0bdx4vFutaIwwKg",
+    "recording": false
+  },
+  {
+    "id": "game-19",
+    "name": "Coaster Cash",
+    "originalName": "【可试玩】19 Coaster Cash 过山车冲刺",
+    "url": "https://staging.wanaka.games/g/gam_0begDraXWRUSoz0",
+    "recording": false
+  },
+  {
+    "id": "game-20",
+    "name": "Super Cat: Bone Battle",
+    "originalName": "【可试玩】20 超级猫咪：骨头大作战",
+    "url": "https://staging.wanaka.games/g/gam_0be04MXj8Y6yHKG",
+    "recording": false
+  },
+  {
+    "id": "game-21",
+    "name": "INKLINE",
+    "originalName": "【可试玩】21 墨线 INKLINE",
+    "url": "https://staging.wanaka.games/g/gam_0beGX7wDaXyyiPJ",
+    "recording": false
+  },
+  {
+    "id": "game-22",
+    "name": "Ball Bounce",
+    "originalName": "【可试玩】22 跃光小球 · Ball Bounce",
+    "url": "https://staging.wanaka.games/g/gam_0bcXFmG4fODi1X1",
+    "recording": false
+  },
+  {
+    "id": "game-23",
+    "name": "Volley Beans",
+    "originalName": "【可试玩】23 Volley Beans — 迷你排球对决",
+    "url": "https://staging.wanaka.games/g/gam_0beJAQCMOeDTCkI",
+    "recording": false
+  },
+  {
+    "id": "game-24",
+    "name": "Mini Trains",
+    "originalName": "【可试玩】24 Mini Trains: 贪吃成列",
+    "url": "https://staging.wanaka.games/g/gam_0beKCTLhW9mc955",
+    "recording": false
+  },
+  {
+    "id": "game-25",
+    "name": "Circle Loop",
+    "originalName": "【可试玩】25 Circle Loop",
+    "url": "https://staging.wanaka.games/g/gam_0beMpob5wxZwH53",
+    "recording": false
+  },
+  {
+    "id": "game-26",
+    "name": "Rhythm Hop",
+    "originalName": "【可试玩】26 Rhythm Hop 节奏之跃",
+    "url": "https://staging.wanaka.games/g/gam_0beQN0sU9t8H3V3",
+    "recording": false
+  },
+  {
+    "id": "game-27",
+    "name": "Kiki's Vacation",
+    "originalName": "【可试玩】27 琪琪的假期 · Kiki's Vacation",
+    "url": "https://staging.wanaka.games/g/gam_0beTSszFmL2MqJp",
+    "recording": false
+  },
+  {
+    "id": "game-28",
+    "name": "Tile Stack",
+    "originalName": "【可试玩】28 Tile Stack · 方块叠塔",
+    "url": "https://staging.wanaka.games/g/gam_0beSKa9XIl5WoU0",
+    "recording": false
+  },
+  {
     "id": "juice-run",
     "name": "Juice Run",
     "originalName": "汽水跑酷",
     "url": "https://staging.wanaka.games/g/gam_0bec3mcPcDKxSVE"
+  },
+  {
+    "id": "game-30",
+    "name": "Save the Sheep",
+    "originalName": "【可试玩】30 救救小羊 · Save the Sheep",
+    "url": "https://staging.wanaka.games/g/gam_0bccaFFodKu4eov",
+    "recording": false
+  },
+  {
+    "id": "game-31",
+    "name": "Hexa Shift",
+    "originalName": "【可试玩】31 Hexa Shift",
+    "url": "https://staging.wanaka.games/g/gam_0beWMvmuyspnEgE",
+    "recording": false
+  },
+  {
+    "id": "game-32",
+    "name": "Cake Sort",
+    "originalName": "【可试玩】32 Cake Sort · 蛋糕拼盘",
+    "url": "https://staging.wanaka.games/g/gam_0bcoqJvGVe1iF48",
+    "recording": false
+  },
+  {
+    "id": "game-33",
+    "name": "Shape Stacker",
+    "originalName": "【可试玩】33 Shape Stacker",
+    "url": "https://staging.wanaka.games/g/gam_0bcofTukp3u2XCK",
+    "recording": false
+  },
+  {
+    "id": "game-34",
+    "name": "Rope Roll",
+    "originalName": "【可试玩】34 Rope Roll — 绳结连钉",
+    "url": "https://staging.wanaka.games/g/gam_0bcpu2FVwrgfEB2",
+    "recording": false
+  },
+  {
+    "id": "game-35",
+    "name": "Ragdoll Kick: Smash Lab",
+    "originalName": "【可试玩】35 Ragdoll Kick — Smash Lab",
+    "url": "https://staging.wanaka.games/g/gam_0bcpQjVrvS48ZhI",
+    "recording": false
+  },
+  {
+    "id": "game-36",
+    "name": "Bridge Run: Container Gates",
+    "originalName": "【可试玩】36 Bridge Run: Container Gates",
+    "url": "https://staging.wanaka.games/g/gam_0bcqtMsEGt84JgE",
+    "recording": false
+  },
+  {
+    "id": "game-37",
+    "name": "Fruit Merge",
+    "originalName": "【可试玩】37 水果合成 · Fruit Merge",
+    "url": "https://staging.wanaka.games/g/gam_0bd8Npj1T3OPuxm",
+    "recording": false
+  },
+  {
+    "id": "game-38",
+    "name": "Tippy Toe",
+    "originalName": "【可试玩】38 Tippy Toe 踮脚猫步",
+    "url": "https://staging.wanaka.games/g/gam_0bd6puVqaYJRGqw",
+    "recording": false
+  },
+  {
+    "id": "game-39",
+    "name": "Find Hole Runner",
+    "originalName": "【可试玩】39 找洞洞 · Find Hole Runner",
+    "url": "https://staging.wanaka.games/g/gam_0bd5jge78p97S2Q",
+    "recording": false
+  },
+  {
+    "id": "game-40",
+    "name": "Popsicle Stack",
+    "originalName": "【可试玩】40 Popsicle Stack",
+    "url": "https://staging.wanaka.games/g/gam_0bd6v8D2Iv3Stme",
+    "recording": false
+  },
+  {
+    "id": "game-41",
+    "name": "Sands of Speed",
+    "originalName": "【可试玩】41 Sands of Speed",
+    "url": "https://staging.wanaka.games/g/gam_0bd9OyiQipWV854",
+    "recording": false
+  },
+  {
+    "id": "game-42",
+    "name": "Office Smash",
+    "originalName": "【可试玩】42 Office Smash",
+    "url": "https://staging.wanaka.games/g/gam_0bdGqK0ytfpvNjJ",
+    "recording": false
+  },
+  {
+    "id": "game-43",
+    "name": "Skyline Rush",
+    "originalName": "【可试玩】43 Skyline Rush",
+    "url": "https://staging.wanaka.games/g/gam_0bdIVaK7h0IpdAP",
+    "recording": false
+  },
+  {
+    "id": "game-44",
+    "name": "Chopper Master",
+    "originalName": "【可试玩】44 剁菜大师 Chopper Master",
+    "url": "https://staging.wanaka.games/g/gam_0bdHaIALhtZAA1r",
+    "recording": false
+  },
+  {
+    "id": "game-45",
+    "name": "Runway Race",
+    "originalName": "【可试玩】45 Runway Race — Fashion Run",
+    "url": "https://staging.wanaka.games/g/gam_0bdHetDlQH8LVXe",
+    "recording": false
+  },
+  {
+    "id": "game-46",
+    "name": "Mall Rush: Door Rules",
+    "originalName": "【可试玩】46 Mall Rush — Door Rules",
+    "url": "https://staging.wanaka.games/g/gam_0bdJ3mXEifZkyQe",
+    "recording": false
+  },
+  {
+    "id": "game-47",
+    "name": "Pixel Racer",
+    "originalName": "【可试玩】47 Pixel Racer 像素狂飙",
+    "url": "https://staging.wanaka.games/g/gam_0bdXA5sSmBlnYLN",
+    "recording": false
+  },
+  {
+    "id": "game-48",
+    "name": "Pastel Blitz",
+    "originalName": "【可试玩】48 彩弹竞技场 Pastel Blitz",
+    "url": "https://staging.wanaka.games/g/gam_0bdUBvhtwnRT16q",
+    "recording": false
+  },
+  {
+    "id": "game-49",
+    "name": "Heli Escape: Rooftop Overwatch",
+    "originalName": "【可试玩】49 Heli Escape — Rooftop Overwatch",
+    "url": "https://staging.wanaka.games/g/gam_0bdXC8PDS5tqUi3",
+    "recording": false
+  },
+  {
+    "id": "game-50",
+    "name": "INK BOX",
+    "originalName": "【可试玩】50 INK BOX · 墨盒攀爬",
+    "url": "https://staging.wanaka.games/g/gam_0bdUmt4MGWAT5MX",
+    "recording": false
   }
 ]

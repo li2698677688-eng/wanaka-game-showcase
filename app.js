@@ -22,43 +22,50 @@ function createVideo(game, type) {
   label.append(title, duration);
   const frame = document.createElement('div');
   frame.className = 'video-frame';
-  const video = document.createElement('video');
-  video.controls = true;
-  video.muted = true;
-  video.defaultMuted = true;
-  video.loop = true;
-  video.playsInline = true;
-  video.preload = 'none';
-  video.poster = `./assets/posters/${game.id}-${type}.jpg`;
-  video.dataset.src = `./assets/videos/${game.id}-${type}.mp4?v=20261106`;
-  video.setAttribute('aria-label', `${game.name} — ${isOriginal ? 'original video' : 'Wanaka game recording'}`);
-  const errorState = document.createElement('div');
-  errorState.className = 'video-error';
-  errorState.hidden = true;
-  const errorMessage = document.createElement('p');
-  errorMessage.textContent = 'This video could not be played.';
-  const download = document.createElement('a');
-  download.href = video.dataset.src;
-  download.textContent = 'Download video';
-  download.setAttribute('download', '');
-  errorState.append(errorMessage, download);
-  video.addEventListener('error', () => { errorState.hidden = false; });
-  video.addEventListener('loadedmetadata', () => {
-    const seconds = Math.floor(video.duration);
-    duration.textContent = `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, '0')}`;
+  if (!isOriginal && game.recording === false) {
+    const pending = document.createElement('p');
+    pending.className = 'recording-pending';
+    pending.textContent = 'Game recording coming soon';
+    frame.append(pending);
+  } else {
+    const video = document.createElement('video');
+    video.controls = true;
+    video.muted = true;
+    video.defaultMuted = true;
+    video.loop = true;
+    video.playsInline = true;
+    video.preload = 'none';
+    video.poster = `./assets/posters/${game.id}-${type}.jpg`;
+    video.dataset.src = `./assets/videos/${game.id}-${type}.mp4?v=20261106`;
+    video.setAttribute('aria-label', `${game.name} — ${isOriginal ? 'original video' : 'Wanaka game recording'}`);
+    const errorState = document.createElement('div');
+    errorState.className = 'video-error';
     errorState.hidden = true;
-  });
-  video.addEventListener('play', () => {
-    if (!visibleVideos.has(video) || document.hidden) {
-      video.pause();
-      return;
-    }
-    if (!video.muted) document.querySelectorAll('video').forEach(other => { if (other !== video) other.muted = true; });
-  });
-  video.addEventListener('volumechange', () => {
-    if (!video.muted) document.querySelectorAll('video').forEach(other => { if (other !== video) other.muted = true; });
-  });
-  frame.append(video, errorState);
+    const errorMessage = document.createElement('p');
+    errorMessage.textContent = 'This video could not be played.';
+    const download = document.createElement('a');
+    download.href = video.dataset.src;
+    download.textContent = 'Download video';
+    download.setAttribute('download', '');
+    errorState.append(errorMessage, download);
+    video.addEventListener('error', () => { errorState.hidden = false; });
+    video.addEventListener('loadedmetadata', () => {
+      const seconds = Math.floor(video.duration);
+      duration.textContent = `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, '0')}`;
+      errorState.hidden = true;
+    });
+    video.addEventListener('play', () => {
+      if (!visibleVideos.has(video) || document.hidden) {
+        video.pause();
+        return;
+      }
+      if (!video.muted) document.querySelectorAll('video').forEach(other => { if (other !== video) other.muted = true; });
+    });
+    video.addEventListener('volumechange', () => {
+      if (!video.muted) document.querySelectorAll('video').forEach(other => { if (other !== video) other.muted = true; });
+    });
+    frame.append(video, errorState);
+  }
   figure.append(label, frame);
   const info = document.createElement('div');
   if (isOriginal) {
@@ -96,7 +103,7 @@ function createVideo(game, type) {
 
 async function loadGames() {
   try {
-    const response = await fetch('./games.json?v=20261106-links');
+    const response = await fetch('./games.json?v=20261108-all-games');
     if (!response.ok) throw new Error('Could not load game list');
     const games = await response.json();
     if (!Array.isArray(games) || !games.length || games.some(game => !/^[a-z0-9-]+$/.test(game.id) || typeof game.name !== 'string')) throw new Error('Invalid game list');
