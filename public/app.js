@@ -35,8 +35,8 @@ function createVideo(game, type) {
     video.loop = true;
     video.playsInline = true;
     video.preload = 'none';
-    video.poster = `./assets/posters/${game.id}-${type}.jpg`;
-    video.dataset.src = `./assets/videos/${game.id}-${type}.mp4?v=20261106`;
+    video.dataset.poster = `./assets/posters/${game.id}-${type}.jpg`;
+    video.dataset.src = `./assets/videos/${game.id}-${type}.mp4?v=20261109`;
     video.setAttribute('aria-label', `${game.name} — ${isOriginal ? 'original video' : 'Wanaka game recording'}`);
     const errorState = document.createElement('div');
     errorState.className = 'video-error';
@@ -120,6 +120,13 @@ async function loadGames() {
       fragment.append(section);
     }
     list.replaceChildren(fragment);
+    const posterObserver = new IntersectionObserver(entries => {
+      for (const { target: video, isIntersecting } of entries) {
+        if (!isIntersecting) continue;
+        video.poster = video.dataset.poster;
+        posterObserver.unobserve(video);
+      }
+    }, { rootMargin: '800px 0px' });
     const observer = new IntersectionObserver(entries => {
       for (const { target: video, isIntersecting, intersectionRatio } of entries) {
         if (isIntersecting && intersectionRatio >= 0.25) {
@@ -132,7 +139,10 @@ async function loadGames() {
         }
       }
     }, { threshold: [0, 0.25] });
-    document.querySelectorAll('video').forEach(video => observer.observe(video));
+    document.querySelectorAll('video').forEach(video => {
+      posterObserver.observe(video);
+      observer.observe(video);
+    });
     const playingBeforeHidden = new Set();
     document.addEventListener('visibilitychange', () => {
       if (document.hidden) {
